@@ -1,5 +1,6 @@
 import Hero from '../components/Hero.jsx'
 import ProductCard from '../components/ProductCard.jsx'
+import { Link } from 'react-router-dom'
 import prod1 from '../assets/product/product-1.png'
 import prod2 from '../assets/product/product-2.png'
 import prod3 from '../assets/product/product-3.png'
@@ -22,7 +23,7 @@ export default function Home() {
             <h2 className="heading-serif text-3xl text-slate-900">En vedette</h2>
             <p className="text-slate-600">Nos sélections de la semaine</p>
           </div>
-          <a href="/products" className="text-rose-700 hover:text-rose-800">Voir tout</a>
+          <Link to="/products" className="text-rose-700 hover:text-rose-800">Voir tout</Link>
         </div>
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {featured.map(p => <ProductCard key={p.id} product={p} />)}
