@@ -6,7 +6,7 @@ export default function ProductCard({ product }) {
       </div>
       <div className="p-4">
         <h3 className="font-medium text-slate-800">{product.name}</h3>
-        <p className="text-rose-700 font-semibold mt-1">${product.price}</p>
+        <p className="text-rose-700 font-semibold mt-1">0.00 DH</p>
         <button className="mt-3 w-full bg-rose-600 text-white py-2.5 rounded-md hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-rose-300 transition shadow-sm">Add to Cart</button>
       </div>
     </div>

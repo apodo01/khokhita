@@ -3,6 +3,7 @@ import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
+import 'swiper/css/effect-fade'
 import slide1 from '../assets/slide/slide-1.png'
 import slide2 from '../assets/slide/slide-2.png'
 import slide3 from '../assets/slide/slide-3.png'
@@ -35,6 +36,8 @@ export default function Hero() {
         modules={[Autoplay, Pagination, Navigation, EffectFade]}
         effect="fade"
         speed={700}
+        slidesPerView={1}
+        fadeEffect={{ crossFade: true }}
         autoplay={{ delay: 4200, disableOnInteraction: false }}
         loop
         pagination={{ clickable: true }}
