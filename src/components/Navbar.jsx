@@ -1,8 +1,10 @@
 import { NavLink, Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import logoImg from '../assets/logo/500539034_17879663850310751_716018081516407088_n.jpg'
+import { useCart } from '../context/CartContext.jsx'
 
 export default function Navbar() {
+  const { totalItems } = useCart()
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -28,10 +30,13 @@ export default function Navbar() {
 
           {/* Desktop nav */}
           <nav className="hidden sm:flex items-center gap-1">
-            <NavLink to="/" end className={({isActive}) => `${base} ${isActive ? active : ''}`}>Home</NavLink>
-            <NavLink to="/products" className={({isActive}) => `${base} ${isActive ? active : ''}`}>Products</NavLink>
-            <NavLink to="/about" className={({isActive}) => `${base} ${isActive ? active : ''}`}>About</NavLink>
+            <NavLink to="/" end className={({isActive}) => `${base} ${isActive ? active : ''}`}>Accueil</NavLink>
+            <NavLink to="/products" className={({isActive}) => `${base} ${isActive ? active : ''}`}>Produits</NavLink>
+            <NavLink to="/about" className={({isActive}) => `${base} ${isActive ? active : ''}`}>À propos</NavLink>
             <NavLink to="/contact" className={({isActive}) => `${base} ${isActive ? active : ''}`}>Contact</NavLink>
+            <NavLink to="/cart" className={({isActive}) => `${base} ${isActive ? active : ''}`}>
+              Panier{totalItems ? ` (${totalItems})` : ''}
+            </NavLink>
           </nav>
 
           {/* Mobile hamburger */}
@@ -55,10 +60,13 @@ export default function Navbar() {
         <div className={`${open ? 'block' : 'hidden'} sm:hidden pb-3`}
              onClick={() => setOpen(false)}>
           <nav className="grid gap-1">
-            <NavLink to="/" end className={({isActive}) => `${base} ${isActive ? active : ''}`}>Home</NavLink>
-            <NavLink to="/products" className={({isActive}) => `${base} ${isActive ? active : ''}`}>Products</NavLink>
-            <NavLink to="/about" className={({isActive}) => `${base} ${isActive ? active : ''}`}>About</NavLink>
+            <NavLink to="/" end className={({isActive}) => `${base} ${isActive ? active : ''}`}>Accueil</NavLink>
+            <NavLink to="/products" className={({isActive}) => `${base} ${isActive ? active : ''}`}>Produits</NavLink>
+            <NavLink to="/about" className={({isActive}) => `${base} ${isActive ? active : ''}`}>À propos</NavLink>
             <NavLink to="/contact" className={({isActive}) => `${base} ${isActive ? active : ''}`}>Contact</NavLink>
+            <NavLink to="/cart" className={({isActive}) => `${base} ${isActive ? active : ''}`}>
+              Panier{totalItems ? ` (${totalItems})` : ''}
+            </NavLink>
           </nav>
         </div>
       </div>

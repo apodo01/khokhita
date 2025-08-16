@@ -7,25 +7,32 @@ import 'swiper/css/effect-fade'
 import slide1 from '../assets/slide/slide-1.png'
 import slide2 from '../assets/slide/slide-2.png'
 import slide3 from '../assets/slide/slide-3.png'
+import slide4 from '../assets/slide/slide-4.png'
 
 const slides = [
   {
     id: 1,
-    title: 'New Arrivals',
-    subtitle: 'Curated pieces for every occasion',
+    title: 'Nouvelles arrivées',
+    subtitle: 'Pièces sélectionnées pour chaque occasion',
     img: slide1,
   },
   {
     id: 2,
-    title: 'Timeless Elegance',
-    subtitle: 'Boutique-quality, thoughtfully designed',
+    title: 'Élégance intemporelle',
+    subtitle: 'Qualité boutique, conçue avec soin',
     img: slide2,
   },
   {
     id: 3,
-    title: 'Handpicked Accessories',
-    subtitle: 'Complete your look with finishing touches',
+    title: 'Accessoires choisis avec soin',
+    subtitle: 'Complétez votre look avec la touche finale',
     img: slide3,
+  },
+  {
+    id: 4,
+    title: 'Incontournables de la boutique',
+    subtitle: 'Nouveaux styles ajoutés chaque semaine',
+    img: slide4,
   },
 ]
 
@@ -53,7 +60,7 @@ export default function Hero() {
                 <div className="mx-auto px-4 sm:px-6 lg:px-8 text-white max-w-3xl">
                   <h1 className="heading-serif text-4xl sm:text-5xl font-semibold mb-3">{s.title}</h1>
                   <p className="text-lg sm:text-xl opacity-95 mb-6">{s.subtitle}</p>
-                  <a href="#featured" className="inline-block bg-white text-slate-900 px-5 py-2 rounded-md hover:bg-rose-50 border border-white/30 transition">Shop now</a>
+                  <a href="#featured" className="inline-block bg-white text-slate-900 px-5 py-2 rounded-md hover:bg-rose-50 border border-white/30 transition">Découvrir</a>
                 </div>
               </div>
             </div>
