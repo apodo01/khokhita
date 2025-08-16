@@ -22,7 +22,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center" aria-label="Home">
             <span className="inline-flex items-center justify-center p-1 sm:p-1.5 bg-white rounded-full shadow-md ring-1 ring-rose-100">
-              <img src={logoImg} alt="khokhita logo" className="h-10 sm:h-12 w-auto rounded-full" />
+              <img src={logoImg} alt="khokhitashop logo" className="h-10 sm:h-12 w-auto rounded-full" />
             </span>
           </Link>
 

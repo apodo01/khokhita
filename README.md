@@ -1,4 +1,4 @@
-# khokhita
+# khokhitashop
 
 Webpage built with React + Vite.
 
